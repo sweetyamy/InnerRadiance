@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import ProductCard from '../component/ProductCard';
+import { Container, Row, Col } from 'react-bootstrap';
 
 const ProductAll = () => {
   // UI에 보여주는것은 useState에 저장
@@ -19,7 +20,15 @@ const ProductAll = () => {
 
   return (
     <div>
-      <ProductCard />
+      <Container>
+        <Row>
+          {productsList.map((item) => (
+            <Col lg={3}>
+              <ProductCard item={item} />
+            </Col>
+          ))}
+        </Row>
+      </Container>
     </div>
   );
 };

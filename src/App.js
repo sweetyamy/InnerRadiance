@@ -4,6 +4,7 @@ import ProductAll from './page/ProductAll.js';
 import Login from './page/Login.js';
 import ProductDetail from './page/ProductDetail.js';
 import Navbar from './component/Navbar.js';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 // 1. 전체페이지
 // - navigation bar
