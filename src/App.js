@@ -1,23 +1,33 @@
-import logo from './logo.svg';
 import './App.css';
+import { Routes, Route } from 'react-router-dom';
+import ProductAll from './page/ProductAll.js';
+import Login from './page/Login.js';
+import ProductDetail from './page/ProductDetail.js';
+import Navbar from './component/Navbar.js';
+
+// 1. 전체페이지
+// - navigation bar
+// - 전체상품 볼수있다
+// 2. 로그인 페이지
+// - 로그인 버튼을 누르면 로그인 페이지를 볼 수 있다
+// - 상품 디테일을 눌렀으나 로그인이 안되어 있을 때 로그인 페이지를 볼 수 있다
+// - 로그인 되어있을때는 디테일 페이지를 볼 수 있다
+// - 로그아웃 버튼을 누르면 로그아웃 된다
+// - 로그아웃이 되면 상품 디테일 페이지를 볼 수 없다, 다시 로그인 페이지가 보인다
+// - 로그인 토글
+// 3. 상품 상세페이지
+// 4. 상품 검색을 할 수 있다
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Navbar />
+      <Routes>
+        <Route path='/' element={<ProductAll />} /> {/* 👈 Renders at /app/ */}
+        <Route path='/login' element={<Login />} /> {/* 👈 Renders at /app/ */}
+        <Route path='/product/:id' element={<ProductDetail />} />{' '}
+        {/* 👈 Renders at /app/ */}
+      </Routes>
     </div>
   );
 }
