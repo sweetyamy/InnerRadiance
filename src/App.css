@@ -1,15 +1,18 @@
+/* Login in */
 .btn-login {
   display: flex;
   justify-content: flex-end;
   margin: 20px;
+  cursor: pointer;
 }
 
+
+/* menu */
 .nav-section {
   display: flex;
   justify-content: center;
 }
 
-/* menu */
 a {
   text-decoration: none;
   color: #000;

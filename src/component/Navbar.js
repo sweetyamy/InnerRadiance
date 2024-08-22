@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser } from '@fortawesome/free-regular-svg-icons';
-import { faSearch } from '@fortawesome/free-solid-svg-icons';
+import { faSearch, faSignOutAlt } from '@fortawesome/free-solid-svg-icons';
+import { useNavigate } from 'react-router-dom';
 
-function Navbar() {
+function Navbar({ isLoggedIn, setAuthenticate }) {
   const menuList = [
     {
       name: 'Top Rank',
@@ -43,22 +44,23 @@ function Navbar() {
     }
   ];
 
-  // useState for login
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const navigate = useNavigate();
 
-  const handleLogin = () => {
-    setIsLoggedIn(true);
+  const goToLogin = () => {
+    setAuthenticate(true);
+    navigate('/login');
   };
 
-  const handleLogout = () => {
-    setIsLoggedIn(false);
+  const goToLogout = () => {
+    setAuthenticate(false);
+    navigate('/');
   };
 
   return (
     <div>
       {/* row1 - login */}
       {!isLoggedIn && (
-        <div className='btn-login' onClick={handleLogin}>
+        <div className='btn-login' onClick={goToLogin}>
           <div>
             <FontAwesomeIcon icon={faUser} />
           </div>
@@ -67,9 +69,9 @@ function Navbar() {
       )}
 
       {isLoggedIn && (
-        <div className='btn-login' onClick={handleLogout}>
+        <div className='btn-login' onClick={goToLogout}>
           <div>
-            <FontAwesomeIcon icon={faUser} />
+            <FontAwesomeIcon icon={faSignOutAlt} />
           </div>
           <div>Logout</div>
         </div>
@@ -78,8 +80,8 @@ function Navbar() {
       {/* row2 - logo */}
       <div className='nav-section'>
         <img
-          width={100}
-          src='https://s.yimg.com/fz/api/res/1.2/bJg5qnc0iygSvtVUq.7wGg--~C/YXBwaWQ9c3JjaGRkO2ZpPWZpdDtoPTI0MDtxPTgwO3c9MzMy/https://s.yimg.com/zb/imgv1/7474a016-1742-3543-b3b7-679f8bd7d852/t_500x300'
+          width={300}
+          src='https://static.oliveyoung.co.kr/pc-static-root/image/comm/h1_logo.png'
           alt='logo'
         />
       </div>

@@ -1,10 +1,11 @@
 import './App.css';
+import React, { useEffect, useState } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import ProductAll from './page/ProductAll.js';
 import Login from './page/Login.js';
-import ProductDetail from './page/ProductDetail.js';
 import Navbar from './component/Navbar.js';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import PrivateRoute from './route/PrivateRoute.js';
 
 // 1. 전체페이지
 // - navigation bar
@@ -20,13 +21,26 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 // 4. 상품 검색을 할 수 있다
 
 function App() {
+  const [authenticate, setAuthenticate] = useState(false);
+
+  useEffect(() => {
+    console.log('authenticate', authenticate);
+  }, [authenticate]);
+
   return (
     <div>
-      <Navbar />
+      <Navbar isLoggedIn={authenticate} setAuthenticate={setAuthenticate} />
       <Routes>
         <Route path='/' element={<ProductAll />} /> {/* 👈 Renders at /app/ */}
-        <Route path='/login' element={<Login />} /> {/* 👈 Renders at /app/ */}
-        <Route path='/product/:id' element={<ProductDetail />} />{' '}
+        <Route
+          path='/login'
+          element={<Login setAuthenticate={setAuthenticate} />}
+        />{' '}
+        {/* 👈 Renders at /app/ */}
+        <Route
+          path='/product/:id'
+          element={<PrivateRoute authenticate={authenticate} />}
+        />{' '}
         {/* 👈 Renders at /app/ */}
       </Routes>
     </div>
