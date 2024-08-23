@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import ProductCard from '../component/ProductCard';
 import { Container, Row, Col } from 'react-bootstrap';
 import { useSearchParams } from 'react-router-dom';
@@ -9,23 +9,22 @@ const ProductAll = () => {
   // search keyword
   const [query] = useSearchParams();
 
-  const getProducts = async () => {
-    // q로 시작되는 아이템을 searchQuery에 저장
+  const getProducts = useCallback(async () => {
     let searchQuery = query.get('q') || '';
     console.log('searchQuery', searchQuery);
 
-    // let url = `http://localhost:4000/products?q=${searchQuery}`;
+    // let url = http://localhost:4000/products?q=${searchQuery};
     let url = `https://my-json-server.typicode.com/sweetyamy/InnerRadiance.git/products?q=${searchQuery}`;
     let res = await fetch(url);
     let data = await res.json();
     console.log('data', data);
 
     setProductsList(data);
-  };
-  // useEffect for data
+  }, [query]); // Wrap in useCallback and include query as dependency
+
   useEffect(() => {
     getProducts();
-  }, [query]);
+  }, [getProducts]); // Now it will not change on every render
 
   return (
     <div>
