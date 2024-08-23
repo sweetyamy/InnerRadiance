@@ -1,5 +1,5 @@
 /* Login in */
-.btn-login {
+.login-btn {
   display: flex;
   justify-content: flex-end;
   margin: 20px;
@@ -24,37 +24,34 @@ a {
   color: #333 !important;
 }
 
-.menus {
-  margin-top: 1em;
-  margin-bottom: 1.5em;
-  display: flex; /* Flexbox로 설정 */
+.menu-area {
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  display: flex;
   justify-content: center;
-  align-items: center;
-  position: relative;
-  flex-wrap: nowrap; /* 줄바꿈을 방지 */
-  border-bottom: 4px solid #1a73e8;
+  border-bottom: 4px solid #82dc28;
 }
 
-.menus ul {
+.menu-list {
   display: flex; 
-  padding: 0; 
-  margin: 0;
-}
-
-.menus li {
-  font-size: 1.2rem;
-  font-family: "Noto Serif", serif;
   list-style-type: none;
-  cursor: pointer;
-  padding: 5px 12px 5px 0px; /* Top Right Bottom Left */
+  flex-wrap: nowrap; /* 줄바꿈을 방지 */
 }
 
-.menus li:last-child {
+.menu-list li {
+  font-size: 1.2rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 0px 12px 0px 0px; /* Top Right Bottom Left */
+}
+
+.menu-list li:last-child {
   padding-right: 0;
 }
 
-.menus li:hover, 
-.menus li.active {
+.menu-list li:hover, 
+.menu-list li.active {
   background-color: beige;
 }
 
@@ -119,7 +116,7 @@ a {
   display: flex;
   justify-self: flex-end;
   align-items: center;
-  flex-shrink: 0;
+  margin-left: auto;
 }
 
 .search-input {
@@ -147,7 +144,7 @@ a {
   align-items: center;
 }
 
-.btn-login {
+.login-btn {
   width: 100%;
   margin: 0;
 }
@@ -204,7 +201,7 @@ a {
   position: absolute;
   top: -10px; 
   right: -10px;
-  background-color: #b50202; 
+  background-color: #ff7878; 
   color: white;
   padding: 5px 10px;
   border-radius: 50px;
@@ -259,7 +256,7 @@ a {
     display: block;
   }
 
-  .menus {
+  .menu-list {
     display: none;
   }
 

@@ -95,7 +95,7 @@ function Navbar({ isLoggedIn, setAuthenticate }) {
     <div>
       {/* row1 - login */}
       {!isLoggedIn && (
-        <div className='btn-login' onClick={goToLogin}>
+        <div className='login-btn' onClick={goToLogin}>
           <div>
             <FontAwesomeIcon icon={faUser} />
           </div>
@@ -104,7 +104,7 @@ function Navbar({ isLoggedIn, setAuthenticate }) {
       )}
 
       {isLoggedIn && (
-        <div className='btn-login' onClick={goToLogout}>
+        <div className='login-btn' onClick={goToLogout}>
           <div>
             <FontAwesomeIcon icon={faSignOutAlt} />
           </div>
@@ -128,16 +128,15 @@ function Navbar({ isLoggedIn, setAuthenticate }) {
         />
       </div>
 
-      {/* navigation */}
-      <div className='menus'>
-        <ul>
+      {/* navigation with search area */}
+      <div className='menu-area'>
+        <ul className='menu-list'>
           {menuList.map((menu) => (
             <li key={menu.path}>
               <a href={menu.path}>{menu.name}</a>
             </li>
           ))}
         </ul>
-        {/* 검색 영역을 여기로 이동 */}
         <div className='search-area'>
           <FontAwesomeIcon
             className='search-ico'
