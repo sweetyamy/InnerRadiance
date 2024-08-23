@@ -3,7 +3,7 @@ import { Button, Container, Row, Col } from 'react-bootstrap';
 import { useParams } from 'react-router-dom';
 
 const ProductDetail = () => {
-  let { id } = useParams();
+  const { id } = useParams();
   const [product, setProduct] = useState(null);
 
   const getProductDetail = async () => {
@@ -18,7 +18,8 @@ const ProductDetail = () => {
 
   useEffect(() => {
     getProductDetail();
-  }, [id]);
+  }, []);
+
   return (
     <Container className='product-detail'>
       <Row>
