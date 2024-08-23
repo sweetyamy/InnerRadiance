@@ -14,24 +14,38 @@ const Login = ({ setAuthenticate }) => {
   };
 
   return (
-    <Container>
+    <Container className='login-container'>
+      <h1>Login</h1>
+      <p>Enjoy various services and benefits of InnerRadiance</p>
       <Form onSubmit={loginUser}>
-        <Form.Group className='mb-3' controlId='formBasicEmail'>
-          <Form.Label>Email address</Form.Label>
-          <Form.Control type='email' placeholder='Enter email' />
-          <Form.Text className='text-muted'>
-            We'll never share your email with anyone else.
-          </Form.Text>
+        <Form.Group className='mb-3 login-input' controlId='formBasicEmail'>
+          <Form.Control
+            type='email'
+            placeholder='Enter email'
+            onFocus={(e) => (e.target.placeholder = '')}
+            onBlur={(e) => (e.target.placeholder = 'Enter email')}
+          />
         </Form.Group>
 
-        <Form.Group className='mb-3' controlId='formBasicPassword'>
-          <Form.Label>Password</Form.Label>
-          <Form.Control type='password' placeholder='Password' />
+        <Form.Group className='mb-3 login-input' controlId='formBasicPassword'>
+          <Form.Control
+            type='password'
+            placeholder='Password'
+            onFocus={(e) => (e.target.placeholder = '')}
+            onBlur={(e) => (e.target.placeholder = 'Password')}
+          />
         </Form.Group>
-        <Form.Group className='mb-3' controlId='formBasicCheckbox'>
-          <Form.Check type='checkbox' label='Check me out' />
-        </Form.Group>
-        <Button variant='primary' type='submit'>
+
+        <div className='login-options'>
+          <Form.Group controlId='formBasicCheckbox'>
+            <Form.Check type='checkbox' label='Save ID' />
+          </Form.Group>
+          <a href='/find-id-password' className='find-id-password'>
+            Find ID / Password
+          </a>
+        </div>
+
+        <Button variant='primary' type='submit' className='btn-login'>
           Login
         </Button>
       </Form>

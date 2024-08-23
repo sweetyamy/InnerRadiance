@@ -7,12 +7,14 @@ const ProductCard = ({ item }) => {
     navigate(`/product/${item.id}`);
   };
   return (
-    <div className='card' onClick={showDetail}>
+    <div onClick={showDetail} className='product-card-container'>
+      {item?.new === true && <div className='new-badge'>New</div>}
       <img src={item?.img} alt='product images' />
-      <div>{item?.choice === true ? 'Conscious Choice' : ''}</div>
-      <div>{item?.title}</div>
-      <div>{item?.price}</div>
-      <div>{item?.new === true ? 'New' : ''}</div>
+      <div className='product-card-typography'>
+        {item?.choice === true ? 'Conscious Choice' : ''}
+      </div>
+      <div className='product-card-title'>{item?.title}</div>
+      <div className='product-card-typography'>{item?.price}</div>
     </div>
   );
 };
