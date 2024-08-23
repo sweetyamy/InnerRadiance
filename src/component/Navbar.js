@@ -112,7 +112,7 @@ function Navbar({ isLoggedIn, setAuthenticate }) {
         </div>
       )}
 
-      {/* 로고 및 햄버거 아이콘 */}
+      {/* logo and hamburger */}
       <div className='nav-logo'>
         <a href='/'>
           <img
@@ -128,7 +128,7 @@ function Navbar({ isLoggedIn, setAuthenticate }) {
         />
       </div>
 
-      {/* 네비게이션 메뉴 (큰 화면에서는 보임) */}
+      {/* navigation */}
       <div className='menus'>
         <ul>
           {menuList.map((menu) => (
@@ -137,9 +137,23 @@ function Navbar({ isLoggedIn, setAuthenticate }) {
             </li>
           ))}
         </ul>
+        {/* 검색 영역을 여기로 이동 */}
+        <div className='search-area'>
+          <FontAwesomeIcon
+            className='search-ico'
+            icon={faSearch}
+            onClick={toggleSearchInput}
+          />
+          <input
+            className={`search-input ${searchVisible ? 'visible' : ''}`}
+            type='text'
+            placeholder='Search Products'
+            onKeyDown={searchFunction}
+          />
+        </div>
       </div>
 
-      {/* 사이드바 메뉴 (작은 화면에서 보임) */}
+      {/* side menu */}
       <div className={`side-menubar ${sideOpen ? 'open' : ''}`}>
         <div className='side-menu-header'>
           <FontAwesomeIcon
@@ -148,6 +162,7 @@ function Navbar({ isLoggedIn, setAuthenticate }) {
             onClick={closeSide}
           />
         </div>
+        {/* menu */}
         <ul className='side-menus'>
           {menuList.map((menu) => (
             <li
@@ -162,21 +177,6 @@ function Navbar({ isLoggedIn, setAuthenticate }) {
             </li>
           ))}
         </ul>
-      </div>
-
-      {/* 검색 입력란 */}
-      <div className='search-area'>
-        <FontAwesomeIcon
-          className='search-ico'
-          icon={faSearch}
-          onClick={toggleSearchInput}
-        />
-        <input
-          className={`search-input ${searchVisible ? 'visible' : ''}`}
-          type='text'
-          placeholder='Search Products'
-          onKeyDown={searchFunction}
-        />
       </div>
     </div>
   );
