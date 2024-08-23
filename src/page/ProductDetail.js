@@ -10,6 +10,7 @@ const ProductDetail = () => {
     // let url = `http://localhost:4000/products/${id}`;
     let url = `https://my-json-server.typicode.com/sweetyamy/InnerRadiance.git/products/${id}`;
     let res = await fetch(url);
+
     let data = await res.json();
     console.log('data', data);
     setProduct(data);
@@ -17,7 +18,7 @@ const ProductDetail = () => {
 
   useEffect(() => {
     getProductDetail();
-  }, []);
+  }, [id]);
   return (
     <Container className='product-detail'>
       <Row>
