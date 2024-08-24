@@ -15,7 +15,7 @@ const ProductAll = () => {
       let keyword = query.get('q') || '';
       console.log('keyword', keyword);
       // let url = `http://localhost:4000/products?q=${keyword}`;
-      let url = `https://my-json-server.typicode.com/sweetyamy/InnerRadiance.git/products?q=${keyword}`;
+      let url = `https://my-json-server.typicode.com/sweetyamy/InnerRadiance/products?q=${keyword}`;
       let res = await fetch(url);
 
       if (!res.ok) {
