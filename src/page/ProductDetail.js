@@ -7,8 +7,8 @@ const ProductDetail = () => {
   const [product, setProduct] = useState(null);
 
   const getProductDetail = useCallback(async () => {
-    let url = `http://localhost:4000/products/${id}`;
-    // let url = `https://my-json-server.typicode.com/sweetyamy/InnerRadiance/products/${id}`;
+    // let url = `http://localhost:4000/products/${id}`;
+    let url = `https://my-json-server.typicode.com/sweetyamy/InnerRadiance/products/${id}`;
     let res = await fetch(url);
 
     let data = await res.json();

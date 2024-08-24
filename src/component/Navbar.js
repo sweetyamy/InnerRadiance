@@ -49,7 +49,7 @@ function Navbar({ isLoggedIn, setAuthenticate }) {
     }
   ];
 
-  let navigate = useNavigate();
+  const navigate = useNavigate();
 
   // responsible side menu
   const [sideOpen, setSideOpen] = useState(false);
@@ -147,7 +147,7 @@ function Navbar({ isLoggedIn, setAuthenticate }) {
             className={`search-input ${searchVisible ? 'visible' : ''}`}
             type='text'
             placeholder='Search Products'
-            onKeyPress={searchFunction}
+            onKeydown={searchFunction}
           />
         </div>
       </div>
