@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
 import ProductCard from '../component/ProductCard';
 import { Container, Row, Col } from 'react-bootstrap';
 import { useSearchParams } from 'react-router-dom';
@@ -9,7 +9,8 @@ const ProductAll = () => {
   // search keyword
   const [query] = useSearchParams();
 
-  const getProducts = async () => {
+  // Wrap in useCallback and include query as dependency
+  const getProducts = useCallback(async () => {
     try {
       let keyword = query.get('q') || '';
       console.log('keyword', keyword);
@@ -28,22 +29,21 @@ const ProductAll = () => {
     } catch (error) {
       console.error('Failed to fetch products:', error);
     }
-  }; // Wrap in useCallback and include query as dependency
+  }, [query]); // Now it will not change on every render
 
   useEffect(() => {
     getProducts();
-  }, [query]); // Now it will not change on every render
+  }, [getProducts]); // Now it will not change on every render
 
   return (
     <div>
       <Container>
         <Row>
-          {productsList.length > 0 &&
-            productsList.map((item) => (
-              <Col md={3} sm={12} key={item.id}>
-                <ProductCard item={item} />
-              </Col>
-            ))}
+          {productsList.map((item) => (
+            <Col lg={3} key={item.id}>
+              <ProductCard item={item} />
+            </Col>
+          ))}
         </Row>
       </Container>
     </div>
