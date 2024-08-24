@@ -3,11 +3,11 @@ import { useNavigate } from 'react-router-dom';
 
 const ProductCard = ({ item }) => {
   const navigate = useNavigate();
-  const showDetail = (id) => {
-    navigate(`/${id}`);
+  const showDetail = () => {
+    navigate(`/product/${item.id}`);
   };
   return (
-    <div onClick={() => showDetail(item.id)} className='product-card-container'>
+    <div onClick={showDetail} className='product-card-container'>
       {item?.new === true && <div className='new-badge'>New</div>}
       <img src={item?.img} className='product-img' alt='product images' />
       <div className='product-card-title'>
