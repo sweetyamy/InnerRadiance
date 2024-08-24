@@ -25,7 +25,18 @@ const ProductAll = () => {
       let data = await res.json();
       console.log('data', data);
 
-      setProductsList(data);
+      // 서버측 쿼리문 미작동으로 프론트 단에서 쿼리 기능 구현
+      const filteredData = keyword
+        ? data.filter((item) => item.title.includes(keyword))
+        : data;
+      console.log('Filtered:', filteredData);
+
+      if (filteredData.length === 0) {
+        alert('검색결과가 없습니다.\n메인페이지로 돌아갑니다.');
+        return;
+      }
+
+      setProductsList(filteredData);
     } catch (error) {
       console.error('Failed to fetch products:', error);
     }
