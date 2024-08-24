@@ -49,7 +49,7 @@ function Navbar({ isLoggedIn, setAuthenticate }) {
     }
   ];
 
-  const navigate = useNavigate();
+  let navigate = useNavigate();
 
   // responsible side menu
   const [sideOpen, setSideOpen] = useState(false);
@@ -80,14 +80,14 @@ function Navbar({ isLoggedIn, setAuthenticate }) {
     navigate('/');
   };
 
-  const searchFunction = (e) => {
-    if (e.key === 'Enter') {
-      console.log(`${e.key} clicked`);
+  const searchFunction = (event) => {
+    if (event.key === 'Enter') {
+      console.log(`${event.key} clicked`);
       // 입력한 검색어를 읽어와서
-      let keyword = e.target.value;
+      let keyword = event.target.value;
       console.log('keyword', keyword);
       // 검색어를 URL에 반영하여 navigate 사용
-      navigate(`/?q=${keyword}`);
+      navigate(`?q=${keyword}`);
     }
   };
 
@@ -147,7 +147,7 @@ function Navbar({ isLoggedIn, setAuthenticate }) {
             className={`search-input ${searchVisible ? 'visible' : ''}`}
             type='text'
             placeholder='Search Products'
-            onKeyDown={searchFunction}
+            onKeyPress={searchFunction}
           />
         </div>
       </div>

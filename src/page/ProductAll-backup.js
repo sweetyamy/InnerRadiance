@@ -7,14 +7,14 @@ const ProductAll = () => {
   // UI에 보여주는것은 useState에 저장
   const [productsList, setProductsList] = useState([]);
   // search keyword
-  const [query] = useSearchParams();
+  const [query, setQuery] = useSearchParams();
 
   const getProducts = async () => {
     try {
       let keyword = query.get('q') || '';
       console.log('keyword', keyword);
-      // let url = `http://localhost:4000/products?q=${keyword}`;
-      let url = `https://my-json-server.typicode.com/sweetyamy/InnerRadiance.git/products?q=${keyword}`;
+      let url = `http://localhost:4000/products?q=${keyword}`;
+      // let url = `https://my-json-server.typicode.com/sweetyamy/InnerRadiance.git/products?q=${searchQuery}`;
       let res = await fetch(url);
 
       if (!res.ok) {
@@ -38,12 +38,11 @@ const ProductAll = () => {
     <div>
       <Container>
         <Row>
-          {productsList.length > 0 &&
-            productsList.map((item) => (
-              <Col md={3} sm={12} key={item.id}>
-                <ProductCard item={item} />
-              </Col>
-            ))}
+          {productsList.map((item) => (
+            <Col lg={3} key={item.id}>
+              <ProductCard item={item} />
+            </Col>
+          ))}
         </Row>
       </Container>
     </div>
