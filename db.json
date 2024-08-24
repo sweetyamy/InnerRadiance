@@ -430,6 +430,27 @@
                 "promotion-end": "",
                 "promotion-price": ""
             }
+        },
+        {
+            "id":21,
+            "img":"https://image.oliveyoung.co.kr/cfimages/cf-goods/uploads/images/thumbnails/550/10/0000/0012/A00000012684603ko.jpg?l=ko",
+            "brand":"닥터지",
+            "tagline":"얼음마스크팩",
+            "title":"닥터지 레드블레미쉬 쿨 수딩 마스크 10p",
+            "price":40000,
+            "sale":true,
+            "sale-info": {
+                "promotion-start": "24.08.01",
+                "promotion-end": "24.08.29",
+                "sale-price": 20000
+            },
+            "new":false,
+            "category": "maskpack",
+            "promotion": {
+                "promotion-start": "",
+                "promotion-end": "",
+                "promotion-price": ""
+            }
         }
     ]
 }
