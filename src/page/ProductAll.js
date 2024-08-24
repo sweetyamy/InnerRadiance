@@ -8,12 +8,12 @@ const ProductAll = () => {
   const [productsList, setProductsList] = useState([]);
   // search keyword
   const [query] = useSearchParams();
+  let keyword = query.get('q') || '';
+  console.log('keyword', keyword);
 
   // Wrap in useCallback and include query as dependency
   const getProducts = useCallback(async () => {
     try {
-      let keyword = query.get('q') || '';
-      console.log('keyword', keyword);
       // let url = `http://localhost:4000/products?q=${keyword}`;
       let url = `https://my-json-server.typicode.com/sweetyamy/InnerRadiance/products?q=${keyword}`;
       let res = await fetch(url);
@@ -45,6 +45,15 @@ const ProductAll = () => {
   useEffect(() => {
     getProducts();
   }, [getProducts]); // Now it will not change on every render
+
+  useEffect(() => {
+    fetch(
+      `https://my-json-server.typicode.com/sweetyamy/InnerRadiance/products?q=${keyword}`
+    )
+      .then((response) => response.json())
+      .then((data) => console.log(data))
+      .catch((error) => console.error('Error:', error));
+  }, [keyword]);
 
   return (
     <div>
