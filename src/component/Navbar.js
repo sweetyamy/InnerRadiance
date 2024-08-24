@@ -147,7 +147,7 @@ function Navbar({ isLoggedIn, setAuthenticate }) {
             className={`search-input ${searchVisible ? 'visible' : ''}`}
             type='text'
             placeholder='Search Products'
-            onKeydown={searchFunction}
+            onKeyDown={searchFunction}
           />
         </div>
       </div>

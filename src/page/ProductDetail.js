@@ -22,25 +22,25 @@ const ProductDetail = () => {
 
   return (
     <Container className='product-detail'>
-      <Row>
+      <Row className='flex-column flex-md-row'>
         <Col>
-          <img src={product?.img} alt='' />
+          <img className='product-detail-img' src={product?.img} alt='' />
         </Col>
 
-        <Col>
+        <Col className='product-detail-info'>
           <p>{product?.brand}</p>
           <h2>
             <span className='product-tagline'>[{product?.tagline}]</span>{' '}
             {product?.title}
             {product?.sale && <span className='product-sale-badge'>Sale</span>}
           </h2>
-          <div>
+          <p className='product-detail-price'>
             {product?.price.toLocaleString('en-US', {
               style: 'currency',
               currency: 'CAN'
             })}
-          </div>
-          <Button>Add</Button>
+          </p>
+          <Button className='btn-add'> + Add Product </Button>
         </Col>
       </Row>
     </Container>

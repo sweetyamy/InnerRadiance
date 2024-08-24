@@ -134,6 +134,11 @@ a {
   border-top: none;
 }
 
+.search-input.visible {
+  display: inline-block;
+  transition: width 0.3s ease; 
+}
+
 
 /* Login */
 .login-container {
@@ -254,6 +259,15 @@ a {
   padding: 20px;
 }
 
+.product-detail-img {
+  margin-top: 10px;
+  border-radius: 20px;
+}
+
+.product-detail-info {
+  padding: 50px;
+}
+
 
 /* Show hamburger menu and search icon when window size is less than 450px */
 @media screen and (max-width: 772px) {
@@ -294,5 +308,15 @@ a {
 
   .login-container {
     max-width: 300px;
+  }
+
+  .product-detail-img{
+    border-radius: 10px;
+    width: 100%;
+    margin: 0px;
+  }
+
+  .product-detail-info {
+    padding-top: 5px;
   }
 }
