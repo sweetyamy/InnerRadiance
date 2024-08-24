@@ -209,6 +209,11 @@ a {
   font-weight: bold;
 }
 
+.product-img {
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
 .product-card-title {
   color: #202122;
   font-family: Lato, Lucida Sans Unicode, Lucida Grande, sans-serif;

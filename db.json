@@ -35,12 +35,7 @@
                 "sale-price": 3300
             },
             "new":true,
-            "category": "maskpack",
-            "promotion": {
-                "promotion-start": "",
-                "promotion-end": "",
-                "promotion-price": ""
-            }
+            "category": "maskpack"
         },
         {
             "id":2,
@@ -56,12 +51,7 @@
                 "sale-price": 12000
             },
             "new":false,
-            "category": "maskpack",
-            "promotion": {
-                "promotion-start": "",
-                "promotion-end": "",
-                "promotion-price": ""
-            }
+            "category": "maskpack"
         },
         {
             "id":3,
@@ -77,12 +67,7 @@
                 "sale-price": 3100
             },
             "new":true,
-            "category": "maskpack",
-            "promotion": {
-                "promotion-start": "24.08.01",
-                "promotion-end": "24.08.29",
-                "promotion-price": 2000
-            }
+            "category": "maskpack"
         },
         {
             "id":4,
@@ -98,12 +83,7 @@
                 "sale-price": 2000
             },
             "new":false,
-            "category": "maskpack",
-            "promotion": {
-                "promotion-start": "24.08.01",
-                "promotion-end": "24.08.29",
-                "promotion-price": 2000
-            }
+            "category": "maskpack"
         },
         {
             "id":5,
@@ -114,12 +94,7 @@
             "price":1000,
             "sale":false,
             "new":false,
-            "category": "maskpack",
-            "promotion": {
-                "promotion-start": "",
-                "promotion-end": "",
-                "promotion-price": ""
-            }
+            "category": "maskpack"
         },
         {
             "id":6,
@@ -130,12 +105,7 @@
             "price":1000,
             "sale":false,
             "new":false,
-            "category": "mask",
-            "promotion": {
-                "promotion-start": "",
-                "promotion-end": "",
-                "promotion-price": ""
-            }
+            "category": "mask"
         },
         {
             "id":7,
@@ -151,12 +121,7 @@
                 "sale-price": 3900
             },
             "new":false,
-            "category": "maskpack",
-            "promotion": {
-                "promotion-start": "24.08.23",
-                "promotion-end": "24.08.29",
-                "promotion-price": 1700
-            }
+            "category": "maskpack"
         },
         {
             "id":8,
@@ -172,12 +137,7 @@
                 "sale-price": 3000
             },
             "new":false,
-            "category": "maskpack",
-            "promotion": {
-                "promotion-start": "24.08.01",
-                "promotion-end": "24.08.29",
-                "promotion-price": 2000
-            }
+            "category": "maskpack"
         },
         {
             "id":9,
@@ -186,19 +146,8 @@
             "tagline":"8월올영픽/단독기획",
             "title":"토리든 다이브인 저분자 히알루론산 마스크 5+1매 기획",
             "price":15000,
-            "sale":true,
-            "sale-info": {
-                "promotion-start": "24.08.01",
-                "promotion-end": "24.08.29",
-                "sale-price": 8700
-            },
             "new":false,
-            "category": "maskpack",
-            "promotion": {
-                "promotion-start": "",
-                "promotion-end": "",
-                "promotion-price": ""
-            }
+            "category": "maskpack"
         },
         {
             "id":10,
@@ -207,19 +156,8 @@
             "tagline":"응급진정/흔적케어",
             "title":"로벡틴 닥터마스크 시카 1매",
             "price":4000,
-            "sale":true,
-            "sale-info": {
-                "promotion-start": "24.08.01",
-                "promotion-end": "24.09.30",
-                "sale-price": 2000
-            },
             "new":false,
-            "category": "maskpack",
-            "promotion": {
-                "promotion-start": "24.08.01",
-                "promotion-end": "24.08.29",
-                "promotion-price": 2000
-            }
+            "category": "maskpack"
         },
         {
             "id":11,
@@ -228,19 +166,8 @@
             "tagline":"리쥬란 독자소재_저자극 안심성분",
             "title":"리쥬란 더마힐러 모이스처 트리트먼트 마스크팩 5매 (온)",
             "price":28000,
-            "sale":true,
-            "sale-info": {
-                "promotion-start": "24.08.01",
-                "promotion-end": "24.08.29",
-                "sale-price": 5600
-            },
             "new":true,
-            "category": "maskpack",
-            "promotion": {
-                "promotion-start": "24.08.19",
-                "promotion-end": "24.08.25",
-                "promotion-price": 5600
-            }
+            "category": "maskpack"
         },
         {
             "id":12,
@@ -249,19 +176,8 @@
             "tagline":"민감진정",
             "title":"라운드랩 소나무 진정 시카 마스크 10매",
             "price":30000,
-            "sale":true,
-            "sale-info": {
-                "promotion-start": "24.08.01",
-                "promotion-end": "24.09.30",
-                "sale-price": 15000
-            },
             "new":true,
-            "category": "maskpack",
-            "promotion": {
-                "promotion-start": "",
-                "promotion-end": "",
-                "promotion-price": ""
-            }
+            "category": "maskpack"
         },
         {
             "id":13,
@@ -270,19 +186,8 @@
             "tagline":"10분급속진정",
             "title":"아비브 껌딱지 시트 마스크 어성초 스티커 5매 (+1매 증정기획)",
             "price":20000,
-            "sale":true,
-            "sale-info": {
-                "promotion-start": "24.08.01",
-                "promotion-end": "24.08.29",
-                "sale-price": 10000
-            },
             "new":false,
-            "category": "maskpack",
-            "promotion": {
-                "promotion-start": "",
-                "promotion-end": "",
-                "promotion-price": ""
-            }
+            "category": "maskpack"
         },
         {
             "id":14,
@@ -291,19 +196,8 @@
             "tagline":"미백탄력",
             "title":"메디앤서 비타 콜라겐 마스크 1매",
             "price":6000,
-            "sale":true,
-            "sale-info": {
-                "promotion-start": "24.08.01",
-                "promotion-end": "24.08.29",
-                "sale-price": 3000
-            },
             "new":false,
-            "category": "maskpack",
-            "promotion": {
-                "promotion-start": "",
-                "promotion-end": "",
-                "promotion-price": ""
-            }
+            "category": "maskpack"
         },
         {
             "id":15,
@@ -312,19 +206,8 @@
             "tagline":"",
             "title":"아비브 약산성 pH 시트 마스크 핏 1매 5종 중 택1",
             "price":4000,
-            "sale":true,
-            "sale-info": {
-                "promotion-start": "24.08.01",
-                "promotion-end": "24.08.29",
-                "sale-price": 1600
-            },
             "new":true,
-            "category": "maskpack",
-            "promotion": {
-                "promotion-start": "",
-                "promotion-end": "",
-                "promotion-price": ""
-            }
+            "category": "maskpack"
         },
         {
             "id":16,
@@ -333,124 +216,8 @@
             "tagline":"8월 올영픽",
             "title":"토리든 셀메이징 비타C 브라이트닝 마스크 5매 (+1매 증정기획) (OY단독)",
             "price":15000,
-            "sale":true,
-            "sale-info": {
-                "promotion-start": "24.08.01",
-                "promotion-end": "24.08.29",
-                "sale-price": 6300
-            },
             "new":false,
-            "category": "maskpack",
-            "promotion": {
-                "promotion-start": "",
-                "promotion-end": "",
-                "promotion-price": ""
-            }
-        },
-        {
-            "id":17,
-            "img":"https://image.oliveyoung.co.kr/cfimages/cf-goods/uploads/images/thumbnails/550/10/0000/0020/A00000020294713ko.jpg?l=ko",
-            "brand":"토르흡",
-            "tagline":"온열소금팩",
-            "title":"토르홉 사우난지앙 솔트마스크 3종 택1 (90g / 90+7g 기획 / 150g)",
-            "price":31500,
-            "sale":true,
-            "sale-info": {
-                "promotion-start": "24.08.01",
-                "promotion-end": "24.08.29",
-                "sale-price": 5700
-            },
-            "new":false,
-            "category": "maskpack",
-            "promotion": {
-                "promotion-start": "",
-                "promotion-end": "",
-                "promotion-price": ""
-            }
-        },
-        {
-            "id":18,
-            "img":"https://image.oliveyoung.co.kr/cfimages/cf-goods/uploads/images/thumbnails/550/10/0000/0020/A00000020080513ko.jpg?l=ko",
-            "brand":"마몽드",
-            "tagline":"1등 마스크",
-            "title":"마몽드 플로라글로우 로즈 리퀴드 마스크 80ml +패드 20매 증정",
-            "price":30000,
-            "sale":true,
-            "sale-info": {
-                "promotion-start": "24.07.01",
-                "promotion-end": "24.08.29",
-                "sale-price": 5100
-            },
-            "new":false,
-            "category": "maskpack",
-            "promotion": {
-                "promotion-start": "",
-                "promotion-end": "",
-                "promotion-price": ""
-            }
-        },
-        {
-            "id":19,
-            "img":"https://image.oliveyoung.co.kr/cfimages/cf-goods/uploads/images/thumbnails/550/10/0000/0020/A00000020827002ko.jpg?l=ko",
-            "brand":"아로셀",
-            "tagline":"국내최대43g",
-            "title":"아로셀 슈퍼 콜라겐 마스크 8매입 대용량",
-            "price":72000,
-            "sale":true,
-            "sale-info": {
-                "promotion-start": "24.08.01",
-                "promotion-end": "24.09.30",
-                "sale-price": 19100
-            },
-            "new":false,
-            "category": "maskpack",
-            "promotion": {
-                "promotion-start": "",
-                "promotion-end": "",
-                "promotion-price": ""
-            }
-        },
-        {
-            "id":20,
-            "img":"https://image.oliveyoung.co.kr/cfimages/cf-goods/uploads/images/thumbnails/550/10/0000/0012/A00000012684603ko.jpg?l=ko",
-            "brand":"닥터지",
-            "tagline":"얼음마스크팩",
-            "title":"닥터지 레드블레미쉬 쿨 수딩 마스크 10p",
-            "price":40000,
-            "sale":true,
-            "sale-info": {
-                "promotion-start": "24.08.01",
-                "promotion-end": "24.08.29",
-                "sale-price": 20000
-            },
-            "new":false,
-            "category": "maskpack",
-            "promotion": {
-                "promotion-start": "",
-                "promotion-end": "",
-                "promotion-price": ""
-            }
-        },
-        {
-            "id":21,
-            "img":"https://image.oliveyoung.co.kr/cfimages/cf-goods/uploads/images/thumbnails/550/10/0000/0012/A00000012684603ko.jpg?l=ko",
-            "brand":"닥터지",
-            "tagline":"얼음마스크팩",
-            "title":"닥터지 레드블레미쉬 쿨 수딩 마스크 10p",
-            "price":40000,
-            "sale":true,
-            "sale-info": {
-                "promotion-start": "24.08.01",
-                "promotion-end": "24.08.29",
-                "sale-price": 20000
-            },
-            "new":false,
-            "category": "maskpack",
-            "promotion": {
-                "promotion-start": "",
-                "promotion-end": "",
-                "promotion-price": ""
-            }
+            "category": "maskpack"
         }
     ]
 }
