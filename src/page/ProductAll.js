@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
 import ProductCard from '../component/ProductCard';
 import { Container, Row, Col } from 'react-bootstrap';
 import { useSearchParams } from 'react-router-dom';
@@ -10,7 +10,7 @@ const ProductAll = () => {
   const [query] = useSearchParams();
 
   // Wrap in useCallback and include query as dependency
-  const getProducts = async () => {
+  const getProducts = useCallback(async () => {
     try {
       let keyword = query.get('q') || '';
       console.log('keyword', keyword);
@@ -34,11 +34,11 @@ const ProductAll = () => {
     } catch (error) {
       console.error('Failed to fetch products:', error);
     }
-  };
+  }, [query]);
 
   useEffect(() => {
     getProducts();
-  }, [query]);
+  }, [getProducts]);
 
   return (
     <div>
